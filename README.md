@@ -5,8 +5,14 @@
 <p>1. clone this repository</p>
 
 ```properties
-git clone https://github.com/Hemanth-bonala-11/task
+git clone https://github.com/Hemanth-bonala-11/task .
 ```  
+
+```properties
+pip install -r requirements.txt
+```  
+
+
 
 <p>2. create tables in your database</p>
 
