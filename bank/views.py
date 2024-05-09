@@ -13,3 +13,7 @@ def insert_data(request):
 
 
     return HttpResponse("<h1> inserted data in db successfully</h1>")
+
+def welcome(request):
+
+    return HttpResponse("<h1> Hemanth Bonala's Task submission for backend </h1>")

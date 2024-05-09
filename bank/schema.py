@@ -8,10 +8,10 @@ class BankType(DjangoObjectType):
         fields = "__all__"
 
 class Query(graphene.ObjectType):
-    all_banks = graphene.List(BankType, first=graphene.Int(), after=graphene.String(), last=graphene.Int(), before=graphene.String(), ifsc=graphene.String(),
+    all_banks = graphene.List(BankType, first=graphene.Int(), after=graphene.String(),  before=graphene.String(), ifsc=graphene.String(),
                               bank_id=graphene.Int())
 
-    def resolve_all_banks(self, info, first=None,  last=None, bank_id=None, ifsc=None):
+    def resolve_all_banks(self, info, first=None,  bank_id=None, ifsc=None):
         queryset = Bank.objects.all()
 
 
@@ -22,9 +22,6 @@ class Query(graphene.ObjectType):
 
         if first:
             queryset = queryset[:first]
-        elif last:
-            queryset = queryset[-last:]
-
 
         return queryset
 
