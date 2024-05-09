@@ -6,5 +6,5 @@ from .views import insert_data
 urlpatterns = [
     # Only a single URL to access GraphQL
     path("insertData", insert_data ),
-    path("graphql", GraphQLView.as_view(graphiql=True, schema=schema)),
+    path("gql", GraphQLView.as_view(graphiql=True, schema=schema)),
 ]
